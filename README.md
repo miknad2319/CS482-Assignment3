@@ -10,3 +10,6 @@ pinned: false
 ---
 
 ### An end of 24 hr journey: When github command line fun goes WRONG
+
+### huggingface space link:
+https://huggingface.co/spaces/miknad2319/Assignment3
