@@ -7,18 +7,18 @@ import matplotlib.pyplot as plt
 from itertools import cycle
 from sklearn.neighbors import NearestNeighbors
 
-feature_vecs = pd.read_csv("face_feature_vecs.csv")
+feature_vecs = pd.read_csv("random_ten_thousand_feature_vecs.csv")
 feature_vecs = feature_vecs.iloc[:, 1:]
 feature_vecs_array = feature_vecs.to_numpy()
 
 neighborhood = NearestNeighbors(n_neighbors=11)
 neighborhood.fit(feature_vecs_array)
 
-face_labels_df = pd.read_csv("face_labels.csv")
+face_labels_df = pd.read_csv("rand_ten_thousand_labels.csv")
 face_labels_df = pd.DataFrame({"Name" : face_labels_df["0"]})
 face_labels = face_labels_df["Name"].values
 current_dir = os.getcwd()
-faces_dir = os.path.join(current_dir, "faces/")
+faces_dir = os.path.join(current_dir, "faces_10000/")
 
 # test_indices = np.random.randint(0, len(face_labels), 10)
 # neighborhood = test_indices
